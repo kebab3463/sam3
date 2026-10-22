@@ -129,6 +129,7 @@ dmypy.json
 *.safetensors
 weights/
 checkpoints/
+checkpoint/
 sam3_logs/
 
 # Data files

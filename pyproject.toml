@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=61", "wheel"]
+requires = ["setuptools<=72", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -7,7 +7,7 @@ name = "sam3"
 dynamic = ["version"]
 description = "SAM3 (Segment Anything Model 3) implementation"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.12,<3.13"
 license = {file = "LICENSE"}
 authors = [
     {name = "Meta AI Research"}
@@ -25,10 +25,11 @@ classifiers = [
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
 ]
 dependencies = [
-    "timm>=1.0.17",
-    "numpy>=1.26,<2",
+    #"timm>=1.0.17",
+    "timm",
+    "numpy>=2.0.0",
     "tqdm",
-    "ftfy==6.1.1",
+    "ftfy>=6.1.1",
     "regex",
     "iopath>=0.1.10",
     "typing_extensions",
@@ -39,11 +40,11 @@ dependencies = [
 dev = [
     "pytest",
     "pytest-cov",
-    "black==24.2.0",
-    "ufmt==2.8.0",
-    "ruff-api==0.1.0",
-    "usort==1.0.2",
-    "gitpython==3.1.31",
+    "black>=24.2.0",
+    "ufmt>=2.8.0",
+    "ruff-api>=0.1.0",
+    "usort>=1.0.2",
+    "gitpython>=3.1.31",
     "yt-dlp",
     "pandas",
     "opencv-python",
